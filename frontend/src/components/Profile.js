@@ -147,7 +147,7 @@ class Profile extends React.Component {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container-fluid">
           <div className="row py-4">
             <div className="col-xs-12 col-md-10 offset-md-1">
               <div className="items-toggle">{this.renderTabs()}</div>
