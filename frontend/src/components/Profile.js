@@ -1,14 +1,14 @@
-import ItemList from "./ItemList";
-import React from "react";
-import { Link } from "react-router-dom";
-import agent from "../agent";
-import { connect } from "react-redux";
+import ItemList from './ItemList';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import agent from '../agent';
+import { connect } from 'react-redux';
 import {
   FOLLOW_USER,
   UNFOLLOW_USER,
   PROFILE_PAGE_LOADED,
   PROFILE_PAGE_UNLOADED,
-} from "../constants/actionTypes";
+} from '../constants/actionTypes';
 
 const EditProfileSettings = (props) => {
   if (props.isUser) {
@@ -29,11 +29,11 @@ const FollowUserButton = (props) => {
     return null;
   }
 
-  let classes = "btn btn-sm action-btn";
+  let classes = 'btn btn-sm action-btn';
   if (props.user.following) {
-    classes += " btn-secondary";
+    classes += ' btn-secondary';
   } else {
-    classes += " btn-outline-secondary";
+    classes += ' btn-outline-secondary';
   }
 
   const handleClick = (ev) => {
@@ -49,7 +49,7 @@ const FollowUserButton = (props) => {
     <button className={classes} onClick={handleClick}>
       <i className="ion-plus-round"></i>
       &nbsp;
-      {props.user.following ? "Unfollow" : "Follow"} {props.user.username}
+      {props.user.following ? 'Unfollow' : 'Follow'} {props.user.username}
     </button>
   );
 };
@@ -147,7 +147,7 @@ class Profile extends React.Component {
           </div>
         </div>
 
-        <div className="container-fluid">
+        <div className="container">
           <div className="row py-4">
             <div className="col-xs-12 col-md-10 offset-md-1">
               <div className="items-toggle">{this.renderTabs()}</div>
